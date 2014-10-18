@@ -13,3 +13,11 @@ index = int(first_line[2])
 
 sequence = raw_input().split()
 
+print seq_len
+
+print subseq_len
+
+print index
+
+print sequence
+
