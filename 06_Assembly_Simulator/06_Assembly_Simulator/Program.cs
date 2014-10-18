@@ -32,7 +32,8 @@ public struct Command
 
 	public static Command FromString(string str)
 	{
-		string[] fields = str.Split(' ');
+		string[] fields = str.Split(new char[] { ' ' }, 
+			StringSplitOptions.RemoveEmptyEntries);
 		Command cmd = new Command();
 
 		int idx = 0;
@@ -151,7 +152,7 @@ class Solution
 	public static void Main (string[] args)
 	{
 		// Lee el tamaño de la memoria
-		int memSize = Convert.ToInt32(Console.ReadLine(), 16);
+		int memSize = Convert.ToInt32(Console.ReadLine(), 16) + 1;
 
 		// Lee los comandos
 		List<Command> cmds = new List<Command>();
@@ -191,9 +192,9 @@ class Solution
 		byte start = Convert.ToByte(cmd.Operands[0].Value, 16);
 		byte end = Convert.ToByte(cmd.Operands[1].Value, 16);
 
-		for (int i = start; i < end; i++) {
+		for (int i = start; i <= end; i++) {
 			Console.Write(this.memory[i].ToString("X2"));
-			if (i != end - 1)
+			if (i != end)
 				Console.Write(" ");
 		}
 
