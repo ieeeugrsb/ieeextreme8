@@ -45,21 +45,23 @@ public class Solution {
         // Creamos el escenario y el pathfinding
         Escenario escenario = new Escenario(mapa);
         Pathfinding pathfinding = new Pathfinding(escenario);
-        Punto origen = new Punto(0, 0);
         
         // Vamos probando por cada destino posible
         int minCoste = Integer.MAX_VALUE;
         for (int i = 0; i < len; i++) {
-            Punto destino = new Punto(len - 1, i);
-            int coste = pathfinding.calculateFrom(origen, destino);
-            
-            // System.out.print("RUTA(" + coste + "):");
-            // while (pathfinding.iterator().hasNext())
-            //     System.out.print(pathfinding.iterator().next() + " ");
-            // System.out.println();
-            
-            if (coste < minCoste)
-                minCoste = coste;
+            for (int j = 0; j < len; j++) {
+                Punto origen = new Punto(0, j);
+                Punto destino = new Punto(len - 1, i);
+                int coste = pathfinding.calculateFrom(origen, destino);
+
+                // System.out.print("RUTA(" + coste + "):");
+                // while (pathfinding.iterator().hasNext())
+                //     System.out.print(pathfinding.iterator().next() + " ");
+                // System.out.println();
+
+                if (coste < minCoste)
+                    minCoste = coste;
+            }
         }
         
         System.out.println(minCoste);
