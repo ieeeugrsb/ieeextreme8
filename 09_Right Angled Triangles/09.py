@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import math
-
 def is_integer_triangle(legs):
     
     def isqrt(n):
@@ -33,8 +31,6 @@ def is_integer_triangle(legs):
     
     #De todas las parejas (a,b), solo aquellas cuyo producto escalar es 0 son coordenadas válidas
     
-
-    
     for p0 in p0s:
         for p1 in p1s:
             if p0[0]*p1[0]*p0[1]*p1[1] == 0:
@@ -46,4 +42,12 @@ def is_integer_triangle(legs):
     return "FALSE"
 
 
-print is_integer_triangle((1, 1))
+n_casos = int(raw_input())
+entradas = []
+for i in range(n_casos):
+    entradas.append(tuple(raw_input().split()))
+
+for i in range(len(entradas)):
+    print is_integer_triangle((int(entradas[i][0]), int(entradas[i][1])))
+
+#print is_integer_triangle((1, 1))
