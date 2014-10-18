@@ -1,24 +1,24 @@
 # -*- coding: utf-8 -*-
 
 # Prueba
-N = 10000
+#N = 10000
+#
+#A = range(1,N)
+##print A
+#
+#Q=1000
+#X = range(Q)
 
-A = range(1,N)
-#print A
-
-Q=1000
-X = range(Q)
-
-##Entrada
-#N = int(raw_input())
-#A_str = raw_input().split()
-#A = []
-#for a in A_str:
-#    A.append(int(a))
-#Q = int(raw_input())
-#X=[]
-#for q in range(Q):
-#    X.append(int(raw_input()))
+#Entrada
+N = int(raw_input())
+A_str = raw_input().split()
+A = []
+for a in A_str:
+    A.append(int(a))
+Q = int(raw_input())
+X=[]
+for q in range(Q):
+    X.append(int(raw_input()))
 
 #Displacement
 
