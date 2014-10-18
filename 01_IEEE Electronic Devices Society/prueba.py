@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
-n=[1,5,3,4,2]
-N=5
+import random
+
+n=[]
+N=20
+for i in range(N):
+    n.append(str(random.randint(1,100)))
+
 M=3
 K=2
+print n
 
 n_prima=n[:] #una copia del vector para ir rotando el vector
 n_sub=[] #el vector de subsecuencias

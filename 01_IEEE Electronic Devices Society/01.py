@@ -1,23 +1,35 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 18 02:24:38 2014
-
-@author: rafael
-"""
 
 first_line = raw_input().split()
 
-seq_len = int(first_line[0])
-subseq_len = int(first_line[1])
-index = int(first_line[2])
+N = int(first_line[0]) #Longitud secuencia
+M = int(first_line[1]) #Longitud subsecuencia
+K = int(first_line[2])
 
-sequence = raw_input().split()
+n_str = raw_input().split() #secuencia
 
-print seq_len
+n=[]
+for i in xrange(N):
+    n.append(int(n)
 
-print subseq_len
+menor = 2147483647 #mayor numero posible
 
-print index
+n_prima=n[:] #una copia del vector para ir rotando el vector
+n_sub=[] #el vector de subsecuencias
+for i in range(N):
+    n_sub=n_prima[0:M] #Coge la primera subsecuencia
+    print n_sub
+    int()
+    n_sub=sorted(n_sub)#ordenado de menor a mayor
+    print n_sub
+    print n_sub[K-1]
+    if int(n_sub[K-1]) <= menor:
+        menor = int(n_sub[K-1])
+        
+    #Ahora roto el vector
+    n_prima.append(n_prima[0]) #Se añade el ultimo numero al final
+    n_prima=n_prima[1:len(n)+1] #Se coge desde la posicion 1 hasta el final +1, para que asi este rotado
 
-print sequence
-
+print menor
+    
+    
